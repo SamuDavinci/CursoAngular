@@ -1,0 +1,10 @@
+<h1>Perfil usuario logeado</h1>
+<hr>
+<br>
+
+<img [src]="user.picture" alt="foto perfil" *ngIf=" authService.user$ | async as user">
+<pre *ngIf=" authService.user$ | async as user">
+    <code>
+        {{user | json}}
+    </code>
+</pre>

@@ -1,0 +1,33 @@
+.swiper {
+    height: 330px;
+    width: 100%;
+    background-position: 180px;
+}
+
+@media screen and (min-width:767px) {
+    .swiper {
+        height: 400px;
+    }
+}
+@media screen and (min-width:991px) {
+    .swiper {
+        height: 500px;
+    }
+}
+@media screen and (min-width:1199px) {
+    .swiper {
+        height: 580px;
+    }
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #FFFFFF;
+}
+
+.movie-desc {
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    bottom: 0;
+    padding: 5px 30px;
+    width: 100%;
+}

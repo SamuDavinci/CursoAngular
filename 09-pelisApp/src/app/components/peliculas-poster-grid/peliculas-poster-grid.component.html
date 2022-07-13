@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-3 mb-5" *ngFor="let movie of movies">
+
+        <img
+            [src]="['https://image.tmdb.org/t/p/w780'+movie.poster_path]"
+            alt="Poster de pelicula"
+            class="img-fluid poster"
+        >
+        <div>
+            <h3>{{movie.title}}</h3>
+            <div class="row text-white infoMovie">
+                <div class="col-10">
+                    <star-rating
+                        [starType]="'svg'"
+                        [staticColor]="'ok'"
+                        [showHalfStars]="true"
+                        [numOfStars]="10"
+                        [rating]="movie.vote_average"
+                        [readOnly]="true"
+                    >                           
+                    </star-rating>
+                </div>
+                <div class="col-2">{{movie.vote_average | number:'1.1'}}</div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col">
+        <input
+            #input
+            type="text"
+            (keyup)="buscar(input.value)"
+            class="form-control"
+            placeholder="Busca canciones o artistas...."
+        >
+    </div>
+</div>
+
+<app-loading *ngIf="loading" class="mt-5"></app-loading>
+
+<app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>

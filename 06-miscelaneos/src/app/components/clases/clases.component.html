@@ -1,0 +1,46 @@
+<div
+    [ngClass]="alert"
+    class="alert alert-primary"
+    role="alert"
+>
+    Esto es un mensaje de alerta hecho con bootstrap
+</div>
+
+<button
+    class="btn btn-info mr-3"
+    (click)="alert = 'alert-info'"
+>Info</button>
+<button
+    class="btn btn-warning"
+    (click)="alert = 'alert-warning'"
+>Warning</button>
+
+<br><br><br>
+
+<h3 [ngClass]="{'text-danger':propiedades.danger, 'text-info':!propiedades.danger}">
+    Clases condicionadas
+</h3>
+
+<button
+    [ngClass]="{ 'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger }"
+    class="btn"
+    (click)="propiedades.danger = !propiedades.danger"
+>Toogle Class</button>
+
+<br><br><br>
+
+<h3>Proceso Asincrono</h3>
+
+<button 
+    class="btn btn-primary"
+    (click)="ejecutar()"
+    [disabled]="loading"
+>
+    <i 
+        [ngClass]="{ 'fa-save':!loading, 'fa-refresh fa-spin':loading }"
+        class="fa"
+    ></i>
+     {{ loading ? 'Espere por favor': 'Guardar cambios' }}
+</button>
+
+<br><br><br>
